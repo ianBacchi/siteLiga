@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liga de Mercado Financeiro UTFPR</title>
+<meta name="description" content="Liga de Mercado Financeiro da UTFPR Apucarana — o elo entre a universidade, a educação financeira e os investimentos.">
+<meta property="og:title" content="Liga de Mercado Financeiro UTFPR">
+<meta property="og:description" content="O elo entre a universidade, a educação financeira e os investimentos.">
+<meta property="og:image" content="img/touro.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#inicio" class="logo"><span class="logo-mark">L</span><span class="logo-text">Liga de Mercado<br><strong>Financeiro UTFPR</strong></span></a>
+    <nav class="links" id="menu">
+      <a href="#sobre">Sobre</a>
+      <a href="#atividades">Atividades</a>
+      <a href="#nucleos">Núcleos</a>
+      <a href="#novidades">Novidades</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#links">Links</a>
+      <a href="#processo" class="btn btn-sm">Processo Seletivo</a>
+    </nav>
+    <button class="menu-btn" aria-label="Abrir menu" id="menuBtn"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="hero-bg" style="background-image:url(img/touro.jpg)"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <p class="eyebrow fade-up">UTFPR · Campus Apucarana · Desde 2021</p>
+    <h1 class="fade-up d1">Formando a próxima geração do <em>mercado financeiro</em>.</h1>
+    <p class="lead fade-up d2">Somos a Liga de Mercado Financeiro da UTFPR — o elo entre a universidade, a educação financeira e o mundo dos investimentos.</p>
+    <div class="hero-cta fade-up d3">
+      <a href="#processo" class="btn">Faça parte da Liga</a>
+      <a href="#sobre" class="btn btn-ghost">Conheça nossa história</a>
+    </div>
+  </div>
+  <a href="#sobre" class="scroll-hint" aria-label="Rolar para baixo"><span></span></a>
+</section>
+
+<!-- Cotações reais (TradingView) -->
+<div class="ticker">
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+      "symbols": [
+        {"proName": "BMFBOVESPA:IBOV", "title": "Ibovespa"},
+        {"proName": "FX_IDC:USDBRL", "title": "Dólar"},
+        {"proName": "FOREXCOM:SPXUSD", "title": "S&P 500"},
+        {"proName": "FOREXCOM:NSXUSD", "title": "Nasdaq 100"},
+        {"proName": "BMFBOVESPA:PETR4", "title": "PETR4"},
+        {"proName": "BMFBOVESPA:VALE3", "title": "VALE3"},
+        {"proName": "BMFBOVESPA:ITUB4", "title": "ITUB4"},
+        {"proName": "BITSTAMP:BTCUSD", "title": "Bitcoin"}
+      ],
+      "showSymbolLogo": true,
+      "colorTheme": "dark",
+      "isTransparent": true,
+      "displayMode": "adaptive",
+      "locale": "br"
+    }
+    </script>
+  </div>
+</div>
+
+<!-- ============ NÚMEROS ============ -->
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat"><strong data-count="2021">2021</strong><span>Ano de fundação</span></div>
+    <div class="stat"><strong data-count="26" data-prefix="+">+26</strong><span>Membros ativos</span></div>
+    <div class="stat"><strong data-count="3">3</strong><span>Imersões nacionais em 2025</span></div>
+    <div class="stat"><strong data-count="4">4</strong><span>Núcleos de atuação</span></div>
+  </div>
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section id="sobre" class="section">
+  <div class="container about">
+    <div class="about-img reveal">
+      <img src="img/nyse.jpg" alt="Fachada da Bolsa de Valores de Nova York" loading="lazy">
+      <div class="about-badge"><strong>2021</strong><span>fundada na UTFPR Apucarana</span></div>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Quem somos</p>
+      <h2>Uma ponte entre a sala de aula e o mercado.</h2>
+      <p class="muted">A Liga de Mercado Financeiro UTFPR é um projeto de ensino da Universidade Tecnológica Federal do Paraná, campus Apucarana. Reunimos estudantes de diferentes cursos com um objetivo em comum: entender, na prática, como funciona o mercado financeiro e levar educação financeira para mais pessoas.</p>
+      <div class="mvv">
+        <div class="mvv-item"><span class="mvv-n">01</span><div><h3>Missão</h3><p>Disseminar a educação financeira e o mercado financeiro para a comunidade acadêmica.</p></div></div>
+        <div class="mvv-item"><span class="mvv-n">02</span><div><h3>Visão</h3><p>Ser referência entre as ligas universitárias de mercado financeiro do Paraná.</p></div></div>
+        <div class="mvv-item"><span class="mvv-n">03</span><div><h3>Valores</h3><p>Crescimento, excelência com simplicidade, profissionalismo, responsabilidade social, motivação, comprometimento, respeito e organização.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAIXA COM FOTO ============ -->
+<section class="banner" style="background-image:url(img/wallstreet.jpg)">
+  <div class="banner-overlay"></div>
+  <div class="container banner-inner reveal">
+    <blockquote>“O investimento em conhecimento paga os melhores juros.”</blockquote>
+    <cite>— Benjamin Franklin</cite>
+  </div>
+</section>
+
+<!-- ============ ATIVIDADES ============ -->
+<section id="atividades" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">O que fazemos</p>
+      <h2>Atividades</h2>
+      <p class="muted">Da teoria às maiores mesas do país: uma formação completa para quem quer construir carreira no mercado.</p>
+    </div>
+    <div class="activities">
+      <article class="activity reveal" style="--img:url(img/b3-trading.jpg)">
+        <div class="activity-body"><span class="tag">Formação</span><h3>Capacitações internas</h3><p>Aulas e workshops de valuation, renda fixa, análise técnica e macroeconomia.</p></div>
+      </article>
+      <article class="activity reveal" style="--img:url(img/b3.jpg)">
+        <div class="activity-body"><span class="tag">Imersões</span><h3>Eventos e visitas</h3><p>Expert XP, Z Summit, imersão na EQI Investimentos e muito mais.</p></div>
+      </article>
+      <article class="activity reveal" style="--img:url(img/nyse.jpg)">
+        <div class="activity-body"><span class="tag">Comunidade</span><h3>Educação financeira</h3><p>Palestras e conteúdos abertos para a comunidade acadêmica e a sociedade.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NÚCLEOS ============ -->
+<section id="nucleos" class="section alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Estrutura</p>
+      <h2>Núcleos de trabalho</h2>
+      <p class="muted">A cada semestre, os membros se dividem em núcleos que desenvolvem projetos práticos.</p>
+    </div>
+    <div class="grid4">
+      <div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg></div><h3>Equity Research</h3><p>Análise fundamentalista e valuation de empresas listadas na B3.</p></div>
+      <div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3>Macro &amp; Renda Fixa</h3><p>Cenário econômico, juros, inflação e títulos públicos e privados.</p></div>
+      <div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M2 7l10-4 10 4-10 4L2 7z"/><path d="M6 9v5c0 2 3 3 6 3s6-1 6-3V9"/></svg></div><h3>Educação Financeira</h3><p>Conteúdos e palestras para levar finanças a mais pessoas.</p></div>
+      <div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M16 8a5 5 0 0 1 0 8M19 5a9 9 0 0 1 0 14"/></svg></div><h3>Marketing &amp; Eventos</h3><p>Comunicação da Liga, redes sociais e organização de eventos.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NOVIDADES (LinkedIn automático) ============ -->
+<section id="novidades" class="section">
+  <div class="container">
+    <div class="section-head row reveal">
+      <div>
+        <p class="eyebrow">Novidades</p>
+        <h2>Últimas do LinkedIn</h2>
+      </div>
+      <a href="https://www.linkedin.com/company/ligafinanceira/" target="_blank" rel="noopener" class="link-arrow">Ver no LinkedIn →</a>
+    </div>
+    <div id="linkedin-feed" class="news"></div>
+  </div>
+</section>
+
+<!-- ============ INSTAGRAM (automático) ============ -->
+<section id="instagram" class="section alt">
+  <div class="container">
+    <div class="section-head row reveal">
+      <div>
+        <p class="eyebrow">@ligautfpr</p>
+        <h2>No Instagram</h2>
+      </div>
+      <a href="https://www.instagram.com/ligautfpr/" target="_blank" rel="noopener" class="link-arrow">Seguir no Instagram →</a>
+    </div>
+    <div id="instagram-feed" class="insta"></div>
+  </div>
+</section>
+
+<!-- ============ EQUIPE ============ -->
+<section id="equipe" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Pessoas</p>
+      <h2>Nossa equipe</h2>
+      <p class="muted">Mais de 26 estudantes de diferentes cursos da UTFPR construindo a Liga juntos.</p>
+    </div>
+    <div id="team-photo"></div>
+    <div id="team" class="team"></div>
+  </div>
+</section>
+
+<!-- ============ PROCESSO SELETIVO ============ -->
+<section id="processo" class="cta" style="background-image:url(img/touro.jpg)">
+  <div class="cta-overlay"></div>
+  <div class="container cta-inner reveal">
+    <p class="eyebrow">Processo Seletivo</p>
+    <h2>Quer fazer parte da Liga?</h2>
+    <p>Aberto a alunos de todos os cursos da UTFPR. Desenvolva-se, construa networking e dê o primeiro passo rumo ao mercado financeiro.</p>
+    <a href="#" id="cta-processo" class="btn" target="_blank" rel="noopener">Quero me inscrever</a>
+  </div>
+</section>
+
+<!-- ============ LINKS (substitui o Beacons) ============ -->
+<section id="links" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Acesso rápido</p>
+      <h2>Links da Liga</h2>
+    </div>
+    <div id="links-list" class="link-grid"></div>
+  </div>
+</section>
+
+<!-- ============ PARCEIROS ============ -->
+<section class="partners-strip">
+  <p class="eyebrow center">Onde já estivemos</p>
+  <div class="marquee"><div class="marquee-track">
+    <span>UTFPR</span><span>Expert XP</span><span>EQI Investimentos</span><span>Z Summit</span><span>GROWY</span>
+    <span>UTFPR</span><span>Expert XP</span><span>EQI Investimentos</span><span>Z Summit</span><span>GROWY</span>
+  </div></div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="#inicio" class="logo"><span class="logo-mark">L</span><span class="logo-text">Liga de Mercado<br><strong>Financeiro UTFPR</strong></span></a>
+      <p>Universidade Tecnológica Federal do Paraná<br>Campus Apucarana — PR</p>
+    </div>
+    <div>
+      <h4>Navegação</h4>
+      <a href="#sobre">Sobre</a><a href="#atividades">Atividades</a><a href="#novidades">Novidades</a><a href="#processo">Processo Seletivo</a>
+    </div>
+    <div>
+      <h4>Redes</h4>
+      <a href="https://www.instagram.com/ligautfpr/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/company/ligafinanceira/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="links.html">Todos os links</a>
+    </div>
+  </div>
+  <div class="container copy">
+    <span>© <span id="y"></span> Liga de Mercado Financeiro UTFPR</span>
+    <span class="credits">Fotos: Carol M. Highsmith / Library of Congress (domínio público) e Wikimedia Commons (CC BY / CC BY-SA).</span>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
