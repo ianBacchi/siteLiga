@@ -183,8 +183,8 @@ h3{font-size:1.12rem;font-weight:600;margin-bottom:.4rem}
 .copy{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:3.5rem;padding-top:1.5rem;border-top:1px solid var(--line);font-size:.78rem;color:#5d6a82}
 
 /* REVEAL */
-.reveal{opacity:0;transform:translateY(36px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
-.reveal.in{opacity:1;transform:none}
+.js .reveal{opacity:0;transform:translateY(36px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
 
 /* RESPONSIVO */
 @media(max-width:1000px){
@@ -200,7 +200,7 @@ h3{font-size:1.12rem;font-weight:600;margin-bottom:.4rem}
   .footer-grid{grid-template-columns:1fr 1fr}
   .footer-grid>div:first-child{grid-column:1/-1}
   .menu-btn{display:block;z-index:2}
-  .links{position:fixed;inset:0;flex-direction:column;justify-content:center;background:rgba(7,13,24,.98);gap:1.8rem;font-size:1.2rem;opacity:0;pointer-events:none;transition:.35s}
+  .links{position:fixed;inset:0;flex-direction:column;justify-content:center;background:var(--bg);gap:1.8rem;font-size:1.2rem;opacity:0;pointer-events:none;transition:.35s}
   .menu-open .links{opacity:1;pointer-events:auto}
   .banner{background-attachment:scroll}
 }
@@ -211,9 +211,15 @@ h3{font-size:1.12rem;font-weight:600;margin-bottom:.4rem}
   .stat:nth-child(3){border-left:0}
   .activities,.news,.grid5{grid-template-columns:1fr}
   .activity{min-height:340px}
-  .team{grid-template-columns:1fr 1fr;gap:1rem}
+  .team{grid-template-columns:1fr 1fr;gap:1.4rem 1rem}
+  .team .member:last-child:nth-child(odd){grid-column:1/-1;width:calc(50% - .5rem);justify-self:center}
   .footer-grid{grid-template-columns:1fr}
   .about-img::before{display:none}
   .hero-overlay{background:linear-gradient(0deg,rgba(7,13,24,.98) 25%,rgba(7,13,24,.6) 100%)}
+  .hero{align-items:flex-end}
+  .hero-content{padding-top:120px;padding-bottom:64px}
+  .hero .eyebrow{font-size:.66rem;letter-spacing:.14em}
+  .hero-cta .btn{flex:1 1 100%;justify-content:center}
+  .nav{padding:14px 0}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.fade-up{opacity:1;transform:none}}

@@ -1,9 +1,35 @@
 (function () {
+  document.documentElement.classList.add("js");
   const C = window.LIGA || {};
   const $ = (s) => document.querySelector(s);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const ext = (url) => /^https?:/.test(url) ? ' target="_blank" rel="noopener"' : "";
 
+  /* ---------- Contadores ---------- */
+  const countUp = (el) => {
+    const end = +el.dataset.count, pre = el.dataset.prefix || "", start = end > 1000 ? end - 40 : 0, t0 = performance.now(), dur = 1600;
+    const tick = (t) => {
+      const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+      el.textContent = pre + Math.round(start + (end - start) * e);
+      if (k < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  /* ---------- Animações ao rolar ---------- */
+  const io = "IntersectionObserver" in window ? new IntersectionObserver((es) => es.forEach((e) => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add("in");
+    if (e.target.dataset.count) countUp(e.target);
+    io.unobserve(e.target);
+  }), { threshold: 0.12 }) : null;
+  function observe() {
+    document.querySelectorAll(".reveal:not(.in), [data-count]:not(.in)").forEach((el, i) => {
+      if (!io) { el.classList.add("in"); if (el.dataset.count) el.textContent = (el.dataset.prefix || "") + el.dataset.count; return; }
+      el.style.transitionDelay = (i % 4) * 0.08 + "s";
+      io.observe(el);
+    });
+  }
   /* ---------- Nav ---------- */
   const y = $("#y"); if (y) y.textContent = new Date().getFullYear();
   const nav = $("#nav");
@@ -88,30 +114,5 @@
     }
   }
 
-  /* ---------- Contadores ---------- */
-  const countUp = (el) => {
-    const end = +el.dataset.count, pre = el.dataset.prefix || "", start = end > 1000 ? end - 40 : 0, t0 = performance.now(), dur = 1600;
-    const tick = (t) => {
-      const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
-      el.textContent = pre + Math.round(start + (end - start) * e);
-      if (k < 1) requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  };
-
-  /* ---------- Animações ao rolar ---------- */
-  const io = "IntersectionObserver" in window ? new IntersectionObserver((es) => es.forEach((e) => {
-    if (!e.isIntersecting) return;
-    e.target.classList.add("in");
-    if (e.target.dataset.count) countUp(e.target);
-    io.unobserve(e.target);
-  }), { threshold: 0.12 }) : null;
-  function observe() {
-    document.querySelectorAll(".reveal:not(.in), [data-count]:not(.in)").forEach((el, i) => {
-      if (!io) { el.classList.add("in"); if (el.dataset.count) el.textContent = (el.dataset.prefix || "") + el.dataset.count; return; }
-      el.style.transitionDelay = (i % 4) * 0.08 + "s";
-      io.observe(el);
-    });
-  }
   observe();
 })();
