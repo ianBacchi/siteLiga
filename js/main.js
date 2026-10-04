@@ -64,8 +64,11 @@
   /* ---------- Instagram ---------- */
   const ig = $("#instagram-feed");
   const renderIg = (items) => {
-    ig.innerHTML = items.slice(0, 12).map((p) =>
-      `<a href="${esc(p.link)}" target="_blank" rel="noopener" class="reveal"><img src="${esc(p.img)}" alt="${esc(p.alt || "Post do Instagram da Liga")}" loading="lazy"></a>`).join("");
+    ig.innerHTML = items.slice(0, 12).map((p) => `
+      <a href="${esc(p.link)}" target="_blank" rel="noopener" class="reveal${p.video ? " is-video" : ""}">
+        <img src="${esc(p.img)}" alt="${esc(p.legenda || "Post do Instagram da Liga")}" loading="lazy">
+        ${p.legenda ? `<span class="insta-cap">${esc(p.legenda)}</span>` : ""}
+      </a>`).join("");
     observe();
   };
   if (ig) {
@@ -77,7 +80,8 @@
         const items = posts.map((p) => ({
           img: (p.sizes && p.sizes.medium && p.sizes.medium.mediaUrl) || (p.mediaType === "VIDEO" ? p.thumbnailUrl : p.mediaUrl),
           link: p.permalink,
-          alt: (p.caption || "").slice(0, 120)
+          video: p.mediaType === "VIDEO",
+          legenda: (p.prunedCaption || p.caption || "").slice(0, 120)
         })).filter((p) => p.img);
         if (items.length) renderIg(items);
       }).catch(() => {});

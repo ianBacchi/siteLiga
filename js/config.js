@@ -20,15 +20,15 @@ window.LIGA = {
   instagramFeedUrl: "",
   linkedinWidgetId: "",
 
-  /* Fotos do Instagram usadas enquanto o feed automático não está ligado.
-     Salve as fotos em img/instagram/ e liste aqui. */
+  /* Posts reais do @ligautfpr (out/2026), salvos em img/instagram/.
+     Usados enquanto o feed automático não está ligado. video: true mostra o ícone de Reels. */
   instagramFallback: [
-    { img: "img/nyse.jpg",       link: "https://www.instagram.com/ligautfpr/" },
-    { img: "img/b3-trading.jpg", link: "https://www.instagram.com/ligautfpr/" },
-    { img: "img/touro.jpg",      link: "https://www.instagram.com/ligautfpr/" },
-    { img: "img/b3.jpg",         link: "https://www.instagram.com/ligautfpr/" },
-    { img: "img/wallstreet.jpg", link: "https://www.instagram.com/ligautfpr/" },
-    { img: "img/nyse.jpg",       link: "https://www.instagram.com/ligautfpr/" }
+    { img: "img/instagram/post1.jpg",  link: "https://www.instagram.com/reel/DdjUx9Lxulv/", video: true, legenda: "Bate-bola da Money Week! Uma pessoa, várias escolhas e pouco tempo para pensar." },
+    { img: "img/instagram/post2.webp", link: "https://www.instagram.com/p/DdUQnkWlBLG/",    legenda: "Money Week foi isso: dois dias imersos no mercado financeiro, e a Liga esteve lá de perto." },
+    { img: "img/instagram/post3.jpg",  link: "https://www.instagram.com/reel/DdRTNazxryY/", video: true, legenda: "Crachá no peito, câmera na mão e muita vontade de aprender. A Money Week foi vivida em cada detalhe." },
+    { img: "img/instagram/post4.jpg",  link: "https://www.instagram.com/reel/Dc9YamJyCy6/", video: true, legenda: "Se você tivesse que definir o mercado financeiro em uma única palavra, qual seria?" },
+    { img: "img/instagram/post5.jpg",  link: "https://www.instagram.com/reel/Dc1caFmPIBl/", video: true, legenda: "Um conselho especial para a Liga, direto da Money Week." },
+    { img: "img/instagram/post6.jpg",  link: "https://www.instagram.com/reel/Dcod_sTTSKG/", video: true, legenda: "Gabriel veio de Apucarana com a Liga para participar do QG Talent." }
   ],
 
   /* Posts do LinkedIn mostrados enquanto o widget não está ligado. */
@@ -58,8 +58,8 @@ window.LIGA = {
      Coloque as fotos em img/equipe/ (ex.: img/equipe/joao.jpg). Sem foto, aparece a inicial. */
   fotoEquipe: "",  // foto do time todo, ex.: "img/equipe/time.jpg"
   diretoria: [
-    { nome: "Nome Sobrenome", cargo: "Presidente",                 foto: "", linkedin: "" },
-    { nome: "Nome Sobrenome", cargo: "Vice-presidente",            foto: "", linkedin: "" },
+    { nome: "Thiago Bachiegga", cargo: "Presidente",               foto: "", linkedin: "" },
+    { nome: "Vitória Pedron", cargo: "Vice-presidente",            foto: "", linkedin: "" },
     { nome: "Nome Sobrenome", cargo: "Diretor(a) de Research",     foto: "", linkedin: "" },
     { nome: "Nome Sobrenome", cargo: "Diretor(a) de Marketing",    foto: "", linkedin: "" },
     { nome: "Tiago Ferreira Ribeiro", cargo: "Professor orientador", foto: "", linkedin: "" }
